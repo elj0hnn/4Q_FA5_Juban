@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape using Numbers Generator</title>
+</head>
+<body>
+  <h1>Shape using Numbers Generator</h1>
+
+    <script>
+      
+        var userNumber = prompt("Kindly enter a number: ");
+        
+        while (!userNumber || isNaN(userNumber)) {
+            alert("Invalid input. Please enter a number.");
+            userNumber = prompt("Kindly enter a number: ");
+        }
+        
+        let enteredNumber = parseInt(userNumber);
+        document.write("Entered number: " + enteredNumber + "<br/><br/>");
+        
+        if (enteredNumber % 2 === 0) { 
+            for (var i = enteredNumber; i > 0; i--) {
+                var line = "";
+                for (var j = 1; j <= i; j++) {
+                    line += i + " ";
+                }
+                document.write(line + "<br/>");
+            }
+        } else {
+            for (var i = enteredNumber; i > 0; i--) {
+                var line = "";
+                for (var j = 1; j <= enteredNumber; j++) {
+                    line += i + " ";
+                }
+                document.write(line + "<br/>");
+            }
+        }
+    </script>
+</body>
+</html>
